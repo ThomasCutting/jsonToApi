@@ -76,7 +76,7 @@ class DocumentServiceProvider
      * @param $value
      * @return string
      */
-    private function retrieveTypeOfValue($value)
+    public function retrieveTypeOfValue($value)
     {
         if(is_array($value)) {
             return "json";
