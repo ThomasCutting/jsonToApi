@@ -16,14 +16,52 @@ class PartyLayerController extends Controller
         return $this->returnEntriesOrFail($token);
     }
 
+    public function parsePost($token)
+    {
+        return $this->createEntryOrFail($token);
+    }
+
     public function parseViaUnique($token, $unique_key, $query)
     {
         return $this->returnViaTokenAndUnique($token, $unique_key, $query);
     }
 
-    private function returnViaTokenAndUnique($token, $unique_key, $query)
+    public function updateViaUnique($token, $unique_key, $query)
     {
         if(DocumentSchema::whereToken($token)->exists()) {
+            return (new DocumentServiceProvider(DocumentSchema::whereToken($token)->first()))->updateEntriesByUnique($unique_key,$query);
+        } else {
+            return [
+                "model does not exist"
+            ];
+        }
+    }
+
+    public function deleteViaUnique($token, $unique_key, $query)
+    {
+        if (DocumentSchema::whereToken($token)->exists()) {
+            return (new DocumentServiceProvider(DocumentSchema::whereToken($token)->first()))->removeEntitiesByUnique($unique_key, $query);
+        } else {
+            return [
+                "model does not exist"
+            ];
+        }
+    }
+
+    private function createEntryOrFail($token)
+    {
+        if (DocumentSchema::whereToken($token)->exists()) {
+            return (new DocumentServiceProvider(DocumentSchema::whereToken($token)->first()))->createEntry();
+        } else {
+            return [
+                "model does not exist"
+            ];
+        }
+    }
+
+    private function returnViaTokenAndUnique($token, $unique_key, $query)
+    {
+        if (DocumentSchema::whereToken($token)->exists()) {
             return (new DocumentServiceProvider(DocumentSchema::whereToken($token)->first()))->retrieveEntitiesByUnique($unique_key, $query);
         } else {
             return [
