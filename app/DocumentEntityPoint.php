@@ -63,6 +63,9 @@ class DocumentEntityPoint extends Model
             case "datetime":
                 $value = PointVaule::whereId($this->value_id)->first()->datetime_value;
                 break;
+            case "json":
+                $value = json_decode(PointVaule::whereId($this->value_id)->first()->json_value);
+                break;
         }
 
         // Return the above value.
