@@ -74,6 +74,9 @@ class WebController extends Controller
     {
         $pointType = new \App\PointType();
         switch ($type) {
+            case "json":
+                $pointType->type_name = "json";
+                break;
             case "boolean":
             case "bool":
                 $pointType->type_name = "boolean";
@@ -108,6 +111,10 @@ class WebController extends Controller
         $pointValue->point_id = $point_id;
 
         switch ($type) {
+            case "json":
+                $pointType->type_name = "json";
+                $pointValue->json_value = json_encode($type_value);
+                break;
             case "boolean":
             case "bool":
                 $pointType->type_name = "boolean";
