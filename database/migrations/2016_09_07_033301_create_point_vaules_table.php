@@ -23,12 +23,13 @@ class CreatePointVaulesTable extends Migration
     }
 
     protected function generatePointValuePoints(Blueprint &$table) {
-        $table->integer("point_id");
+        $table->integer("point_id")->default(0);
         $table->string("string_value")->default("");
         $table->integer("integer_value")->default(0);
         $table->float("float_value")->default(0.00);
         $table->boolean("boolean_value")->default(false);
         $table->dateTime("datetime_value")->default(\Carbon\Carbon::now());
+        $table->string("json_value")->default("");
     }
 
     /**
