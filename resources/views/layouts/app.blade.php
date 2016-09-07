@@ -2,8 +2,7 @@
       xmlns:og="http://opengraphprotocol.org/schema/"
       xmlns:fb="http://www.facebook.com/2008/fbml"
       xml:lang="en"
-      lang="en"
-      style="font-size: 9.81px;">
+      lang="en">
 
     <head>
 
