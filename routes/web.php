@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','WebController@index');
+Route::post('/compute','WebController@buildApiFunnel');

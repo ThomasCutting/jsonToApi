@@ -1,9 +1,100 @@
+html,body {
+  margin:0px;
+  padding:0px;
+  background-color:#EBEBEB;
+}
 
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+*.font-primary {
+  font-family:"Montserrat",sans-serif;
+  font-weight:500;
+  &.light {
+    font-weight:100;
+  }
+  &.bold {
+    font-weight:800;
+  }
+}
 
-// Variables
-@import "variables";
+*.font-secondary {
+  font-family:"Open Sans",sans-serif;
+  font-weight:500;
+  &.light {
+    font-weight:100;
+  }
+  &.bold {
+    font-weight:800;
+  }
+}
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+.jumbotron-custom {
+  margin-bottom: -40px;
+  background-color:#50E3C2;
+  text-align: center;
+  text-shadow: 0px 2px 4px rgba(0,0,0,.5);
+  color: white;
+  & .bigger {
+    font-size:6rem;
+    font-weight:800;
+    font-family:"Montserrat",sans-serif;
+  }
+  & p.lead {
+    font-family: "Montserrat",sans-serif;
+  }
+}
+
+.panel-custom {
+  & .panel-body {
+    padding:25px;
+    background-color:#ffffff;
+    &.border {
+      box-shadow:0px 0px 4px rgba(0,0,0,0.5);
+    }
+  }
+}
+
+textarea.simpleton {
+  resize: none;
+  width: 100%;
+  height: 250px;
+  background-color: #f7f7f7;
+  border-color: #50e3c2;
+  color: #E35050;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-weight: 100;
+  font-size: 0.788888rem;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+}
+
+.btn.btn-primary {
+  background-color:#50E3C2;
+  color:white;
+  font-family:"Montserrat",sans-serif;
+  border:none;
+  border-radius:0px !important;
+}
+
+.route-listing {
+  & .text-primary {
+    color:#50E3C2;
+  }
+  & a {
+    color:#333;
+  }
+}
+
+.panel.panel-inverse {
+  background-color:#000;
+  color:#9B9B9B;
+  padding:25px;
+}
+
+#apiFadeDesign {
+  & .modal-header {
+    border-bottom:none;
+  }
+  & .modal-footer {
+    border-top:none;
+  }
+}
