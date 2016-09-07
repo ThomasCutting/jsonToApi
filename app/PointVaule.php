@@ -26,6 +26,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\PointVaule whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\PointVaule whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property string $json_value
+ * @method static \Illuminate\Database\Query\Builder|\App\PointVaule whereJsonValue($value)
  */
 class PointVaule extends Model
 {

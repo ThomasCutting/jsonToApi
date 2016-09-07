@@ -13,6 +13,13 @@ use Illuminate\Foundation\Inspiring;
 |
 */
 
+Artisan::command('install',function(){
+    $this->info("Installing the JsonToApi system..");
+    $this->call("migrate:refresh");
+    $this->call("db:seed");
+    $this->call("ide-helper:models");
+})->describe("Install the JsonToApi system");
+
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
