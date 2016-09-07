@@ -13,11 +13,17 @@ use Illuminate\Foundation\Inspiring;
 |
 */
 
-Artisan::command('install',function(){
+Artisan::command('install:reg',function(){
     $this->info("Installing the JsonToApi system..");
     $this->call("migrate:refresh");
     $this->call("db:seed");
     $this->call("ide-helper:models");
+})->describe("Install the JsonToApi system");
+Artisan::command('install:nodb',function(){
+    $this->info("Installing the JsonToApi system..");
+    $this->call("migrate:refresh");
+//    $this->call("db:seed");
+//    $this->call("ide-helper:models");
 })->describe("Install the JsonToApi system");
 
 Artisan::command('inspire', function () {
