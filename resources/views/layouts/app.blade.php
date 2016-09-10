@@ -20,8 +20,7 @@
               content="json to api, json api cloud, json to cloud, turn json into an api, turn json into api, how to make a api from json, how to make an api from json, how do i turn json into an api">
         <meta name="author"
               content="Thomas Cutting">
-        <meta name="google-site-verification"
-              content="hkuPgHszDR7GrWOoygSaFg6RQv1FZsHvyot-bo6RrOY">
+        <meta name="google-site-verification" content="Z-EY9ny105petA8sAYmMf8n8bkot68Fx8jmMFYrvwXM" />
         <!-- -->
         <link rel="shortcut icon"
               href="/img/favicon.ico"
