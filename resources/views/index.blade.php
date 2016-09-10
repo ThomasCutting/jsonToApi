@@ -138,9 +138,13 @@ A conditional value that is queried against that key.
                             </strong>
                         </h5>
                         <br/>
+                        <p style="text-align:center;">
+                            <a class="btn btn-secondary" href="http://jsontoapi.com/?token=1a8471ef411bdeb926c8cf26d05a3a1a4bfebc46">API Sample</a>
+                        </p>
+                        <br/>
                         <form method="POST" action="{{url('/compute')}}">
                             {{csrf_field()}}
-                        <textarea class="simpleton" name="jsonField"></textarea>
+                        <textarea class="simpleton" name="jsonField" placeholder='{"id":1"title":"Hello World","body":"Lorem ipsum sit amet"}'></textarea>
                         <br/>
                         <button type="submit" class="btn btn-primary">
                             Turn into API

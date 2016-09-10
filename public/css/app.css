@@ -60,6 +60,13 @@ textarea.simpleton {
   border: none;
   border-radius: 0px !important; }
 
+.btn.btn-secondary {
+  background-color: #333;
+  color: white;
+  font-family: "Montserrat",sans-serif;
+  border: none;
+  border-radius: 0px !important; }
+
 .route-listing .text-primary {
   color: #50E3C2; }
 
